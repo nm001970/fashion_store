@@ -1,38 +1,42 @@
+import Link from 'next/link';
 import { BagIcon, HeartIcon, SearchIcon, UserIcon } from './Icons';
+import { MegaNav } from './MegaNav';
 
 export function Header() {
   return (
     <>
-      <div className="announcement">ارسال رایگان برای سفارش‌های بالای 1.`000 تومان · بازگشت تا ۳۰ روز</div>
+      <div className="announcement">ارسال رایگان برای سفارش‌های بالای ۱٬۵۰۰٬۰۰۰ تومان · بازگشت تا ۳۰ روز · اصالت برند</div>
       <header className="header">
         <div className="container header-inner">
-          <a className="brand" href="#top" aria-label="خانه">
+          <Link className="brand" href="/" aria-label="FORME — خانه">
             <span className="brand-mark">F</span>
             <span>
               <span className="brand-name">FORME</span>
               <span className="brand-sub">FASHION / CULTURE</span>
             </span>
-          </a>
+          </Link>
 
           <nav className="nav" aria-label="ناوبری اصلی">
-            <a href="#new">تازه‌ها</a>
-            <a href="#women">زنانه</a>
-            <a href="#men">مردانه</a>
-            <a href="#shoes">کفش</a>
-            <a href="#collections">کالکشن‌ها</a>
-            <a href="#stories">استایل و مجله</a>
+            <Link href="/shop">تازه‌ها</Link>
+            <Link href="/category/women">زنانه</Link>
+            <Link href="/category/men">مردانه</Link>
+            <Link href="/category/shoes">کفش</Link>
+            <Link href="/collections">کالکشن‌ها</Link>
+            <Link href="/journal">مجله</Link>
           </nav>
 
           <div className="header-actions">
-            <label className="search-pill" aria-label="جستجو">
+            <Link className="search-pill" href="/search" aria-label="جستجو در فروشگاه">
               <SearchIcon width={18} height={18} aria-hidden="true" />
-              <input placeholder="جستجو در برندها و محصولات" readOnly />
-            </label>
-            <button className="icon-btn solid" aria-label="علاقه‌مندی‌ها"><HeartIcon width={18} height={18} /></button>
-            <button className="icon-btn solid" aria-label="سبد خرید"><BagIcon width={18} height={18} /></button>
-            <button className="icon-btn solid" aria-label="حساب کاربری"><UserIcon width={18} height={18} /></button>
+              <span>جستجو در برندها و محصولات</span>
+              <kbd>⌘ K</kbd>
+            </Link>
+            <Link className="icon-btn solid" href="/wishlist" aria-label="علاقه‌مندی‌ها"><HeartIcon width={18} height={18} /></Link>
+            <Link className="icon-btn solid bag-btn" href="/cart" aria-label="سبد خرید"><BagIcon width={18} height={18} /><span>۰</span></Link>
+            <Link className="icon-btn solid" href="/account" aria-label="حساب کاربری"><UserIcon width={18} height={18} /></Link>
           </div>
         </div>
+        <MegaNav />
       </header>
     </>
   );

@@ -1,10 +1,12 @@
 import type { Metadata } from 'next';
+import Link from 'next/link';
 import './globals.css';
 import { Header } from '../components/Header';
+import { BagIcon, HeartIcon, SearchIcon, UserIcon } from '../components/Icons';
 
 export const metadata: Metadata = {
-  title: 'FORME — Fashion / Culture',
-  description: 'Editorial fashion storefront concept — frontend first.',
+  title: 'FORME — فروشگاه مد و پوشاک',
+  description: 'فرم تازه‌ای برای استایل؛ فروشگاه مد با لایه‌ای از محتوای editorial.',
 };
 
 export default function RootLayout({ children }: Readonly<{ children: React.ReactNode }>) {
@@ -17,19 +19,22 @@ export default function RootLayout({ children }: Readonly<{ children: React.Reac
           <footer className="footer">
             <div className="container">
               <div className="footer-grid">
-                <div><div className="brand"><span className="brand-mark">F</span><span><span className="brand-name">FORME</span><span className="brand-sub">FASHION / CULTURE</span></span></div><p style={{maxWidth: 320, marginTop: 14}}>یک فروشگاه مد با لایه‌ای از محتوای editorial؛ طراحی‌شده برای کشف سریع‌تر و تصمیم خرید بهتر.</p></div>
-                <div><h4>خرید</h4><div className="footer-links"><a href="#women">زنانه</a><a href="#men">مردانه</a><a href="#shoes">کفش</a><a href="#collections">کالکشن‌ها</a></div></div>
-                <div><h4>راهنما</h4><div className="footer-links"><a href="#stories">مجله</a><a href="#top">سؤالات متداول</a><a href="#top">سایزبندی</a><a href="#top">بازگشت</a></div></div>
-                <div><h4>عضویت</h4><p>برای دریافت ادیت‌های فصلی و معرفی‌های جدید.</p><a href="#top" className="cta ghost" style={{marginTop: 10}}>عضویت در خبرنامه</a></div>
+                <div>
+                  <div className="brand"><span className="brand-mark">F</span><span><span className="brand-name">FORME</span><span className="brand-sub">FASHION / CULTURE</span></span></div>
+                  <p className="footer-intro">یک فروشگاه مد مستقل، با نگاه یک مجله؛ برای اینکه پیدا کردن چیز درست، خودش بخشی از لذت خرید باشد.</p>
+                </div>
+                <div><h4>خرید</h4><div className="footer-links"><Link href="/category/women">زنانه</Link><Link href="/category/men">مردانه</Link><Link href="/category/shoes">کفش</Link><Link href="/collections">کالکشن‌ها</Link></div></div>
+                <div><h4>راهنما</h4><div className="footer-links"><Link href="/journal">مجله</Link><Link href="/shop">سایزبندی</Link><Link href="/shop">بازگشت</Link><Link href="/shop">سؤالات متداول</Link></div></div>
+                <div><h4>عضویت</h4><p>برای وقت‌هایی که چیز تازه‌ای واقعاً ارزش دیدن دارد؛ نه برای پر کردن صندوق پیام‌ها.</p><span className="cta ghost">عضویت در خبرنامه</span></div>
               </div>
-              <div className="footer-bottom">© 2026 FORME · Frontend concept · UI only</div>
+              <div className="footer-bottom"><span>© 2026 FORME</span><span>Frontend concept · UI only</span></div>
             </div>
           </footer>
           <nav className="mobile-nav" aria-label="ناوبری موبایل">
-            <a className="active" href="#top"><span>⌂</span><span>خانه</span></a>
-            <a href="#products"><span>⌕</span><span>جستجو</span></a>
-            <a href="#collections"><span>✦</span><span>ادیت‌ها</span></a>
-            <a href="#top"><span>◌</span><span>حساب</span></a>
+            <Link className="active" href="/"><span><span className="nav-icon">⌂</span></span><span>خانه</span></Link>
+            <Link href="/shop"><SearchIcon width={19} height={19} /><span>فروشگاه</span></Link>
+            <Link href="/collections"><BagIcon width={19} height={19} /><span>کالکشن</span></Link>
+            <Link href="/shop"><UserIcon width={19} height={19} /><span>حساب</span></Link>
           </nav>
         </div>
       </body>
