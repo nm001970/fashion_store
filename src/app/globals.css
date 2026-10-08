@@ -1,13 +1,13 @@
 @import "tailwindcss";
 
 :root {
-  --bg: #aba5afa1;
+  --bg: #ff6a00b9;
   --surface: #111113;
   --surface-2: #17171a;
   --surface-3: #202024;
   --text: #f7f4ed;
   --muted: #9d9aa2;
-  --line: rgba(255, 255, 255, 0.09);
+  --line: rgb(255, 255, 255);
   --accent: #d7ff4b;
   --accent-ink: #11120a;
   --warm: #ece7dc;
@@ -237,7 +237,7 @@ img { max-width: 100%; display: block; }
   .brand-sub { display:none; }
   .brand-name { font-size:14px; }
   .header-actions .search-pill { order: 4; position:absolute; left:12px; right:12px; top:74px; min-width:0; }
-  .header { padding-bottom:62px; }
+  /* .header { padding-bottom:62px; } */
   .header-actions .icon-btn:nth-last-child(2) { display:none; }
   .hero { padding-top:12px; }
   .hero-main { min-height:520px; border-radius:24px; }
@@ -467,7 +467,7 @@ img { max-width: 100%; display: block; }
   --accent-2: #b9a7ff;
   --success: #b8e77b;
   --max-wide: 1560px;
-  --shadow-soft: 0 22px 70px rgba(0,0,0,.24);
+  --shadow-soft: 0 22px 70px rgb(0, 0, 0);
 }
 
 ::selection { background: var(--accent); color: var(--accent-ink); }
@@ -667,7 +667,7 @@ img { max-width: 100%; display: block; }
   .header-actions .icon-btn { display:none; }
   .header-actions .icon-btn:nth-last-child(2), .header-actions .icon-btn:last-child { display:grid; }
   .hero { padding-top:12px; }
-  .hero-main { min-height:560px; border-radius:22px; }
+  .hero-main { min-height:373px; border-radius:22px; }
   .hero-side { min-height:0; display:block; border-radius:22px; }
   .side-visual { min-height:250px; margin:22px 0; }
   .hero-content { inset-inline:22px; bottom:26px; }
