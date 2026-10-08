@@ -1,7 +1,7 @@
 @import "tailwindcss";
 
 :root {
-  --bg: #ff6a00b9;
+  --bg: #17171ad1;
   --surface: #111113;
   --surface-2: #17171a;
   --surface-3: #202024;
@@ -143,9 +143,9 @@ img { max-width: 100%; display: block; }
 
 .section { padding: 70px 0 0; }
 .section-head { display: flex; align-items: end; justify-content: space-between; gap: 18px; margin-bottom: 18px; }
-.section-kicker { color: #ff0099; font-size: 15px; text-transform: uppercase; letter-spacing: .12em; }
+.section-kicker { color: #25ff00; font-size: 15px; text-transform: uppercase; letter-spacing: .12em; }
 .section-title { margin: 4px 0 0; font-size: clamp(25px,3vw,39px); letter-spacing: -.05em; }
-.section-link { color: #ff0099; font-size: 12px; }
+.section-link { color: #25ff00; font-size: 12px; }
 
 .category-grid { display: grid; grid-template-columns: repeat(5,1fr); gap: 12px; }
 .category-card { position: relative; min-height: 185px; overflow: hidden; border-radius: 20px; padding: 18px; background: #19191c; border: 1px solid var(--line); }
@@ -181,7 +181,7 @@ img { max-width: 100%; display: block; }
 .badge { position:absolute; top:12px; inset-inline-start:12px; z-index:2; padding:7px 9px; border-radius:999px; background:#f5f1e8; color:#1b1b1c; font-size:10px; font-weight:900; }
 .heart { position:absolute; top:10px; inset-inline-end:10px; z-index:2; width:38px; height:38px; display:grid; place-items:center; border-radius:50%; background:rgba(0,0,0,.34); color:#fff; border:1px solid rgba(255,255,255,.12); }
 .product-info { padding: 12px 2px 0; }
-.product-brand { color:#d400ff; font-size:13px; }
+.product-brand { color:#000000; font-size:13px; }
 .product-name { margin-top:5px; font-size:14px; font-weight:700; }
 .product-row { display:flex; justify-content:space-between; gap:12px; margin-top:8px; }
 .price { font-size:13px; font-weight:900; }
@@ -517,7 +517,7 @@ img { max-width: 100%; display: block; }
 .product-info { padding-top: 13px; }
 .product-brand { font-size: 11px; letter-spacing: .08em; color: #747179; }
 .product-name { display:block; margin-top: 4px; font-size: 12px; line-height:1.45; }
-.product-meta-line { margin-top: 5px; font-size: 12px; color:#d400ff; white-space:nowrap; overflow:hidden; text-overflow:ellipsis; }
+.product-meta-line { margin-top: 5px; font-size: 12px; color:#000000; white-space:nowrap; overflow:hidden; text-overflow:ellipsis; }
 .product-topline .heart { width: 34px; height: 34px; display:grid; place-items:center; border:1px solid var(--line); border-radius:50%; background:#141416; }
 .product-row { margin-top:12px; align-items:flex-end; }
 .price-stack { display:flex; align-items:baseline; gap:8px; flex-wrap:wrap; }
@@ -867,7 +867,7 @@ img { max-width: 100%; display: block; }
   line-height: 1.08;
 }
 .section-kicker {
-  color: #ff0099;
+  color: #25ff00;
   font-size: 15px;
   letter-spacing: .1em;
 }
@@ -936,8 +936,8 @@ img { max-width: 100%; display: block; }
 .statement-wrap .section-kicker { color: var(--accent); }
 
 /* Warmer, less mechanical microcopy. */
-.product-meta-line { color: #d400ff; }
-.product-brand { color: #d400ff; }
+.product-meta-line { color: #25ff00; }
+.product-brand { color: #25ff00; }
 .product-name { letter-spacing: -.01em; }
 .service-strip-inner { color: var(--text); }
 
@@ -1059,7 +1059,7 @@ img { max-width: 100%; display: block; }
   flex: 1 1 auto;
 }
 .product-brand {
-  color: #d400ff;
+  color: #000000;
   font-size: 11px;
   line-height: 1.25;
   letter-spacing: .075em;
@@ -1077,7 +1077,7 @@ img { max-width: 100%; display: block; }
 }
 .product-meta-line {
   margin-top: 4px;
-  color: #d400ff;
+  color: #ffffff;
   font-size: 13px;
   line-height: 1.35;
   white-space: nowrap;
@@ -1191,7 +1191,7 @@ img { max-width: 100%; display: block; }
   .product-topline { min-height: 67px; gap: 9px; }
   .product-brand { font-size: 13px; }
   .product-name { font-size: 12.5px; line-height: 1.4; }
-  .product-meta-line { font-size: 12px; }
+  .product-meta-line { font-size: 14px; }
   .product-topline .heart { width: 30px; height: 30px; flex-basis: 30px; }
   .product-row { column-gap: 9px; }
   .price { font-size: 11px; }
@@ -1234,7 +1234,7 @@ img { max-width: 100%; display: block; }
   gap: 3px;
 }
 .sale-line {
-  min-height: 13px;
+  min-height: 30px;
   display: inline-flex;
   align-items: baseline;
   flex-wrap: nowrap;
@@ -1275,7 +1275,7 @@ img { max-width: 100%; display: block; }
     gap: 3px;
   }
   .sale-line {
-    min-height: 12px;
+    min-height: 30px;
     gap: 6px;
   }
   .sale-note {
@@ -1321,7 +1321,7 @@ img { max-width: 100%; display: block; }
 
 @media (max-width: 680px) {
   .sale-line {
-    gap: 5px;
+    gap: 11px;
   }
   .sale-note {
     font-size: 13.5px;
